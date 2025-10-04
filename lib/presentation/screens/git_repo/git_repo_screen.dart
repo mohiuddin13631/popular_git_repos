@@ -33,6 +33,7 @@ class _GitRepoScreenState extends State<GitRepoScreen> {
       backgroundColor: AppColor.screenBGColor,
       appBar: const CustomAppBar(
         title: AppStrings.gitRepo,
+        isShowLeading: false,
       ),
       body: BlocBuilder<GitBloc, GitState>(builder: (context, state) {
         if (state is GitFailure) {

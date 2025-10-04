@@ -5,10 +5,10 @@ import 'package:block_structure/data/util/dimensions.dart';
 import 'package:block_structure/models/git_repo/git_repo_model.dart';
 import 'package:block_structure/presentation/component/custom_app_bar.dart';
 import 'package:block_structure/presentation/component/image/my_network_image_widget.dart';
-import 'package:block_structure/presentation/component/webview_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:go_router/go_router.dart';
+import '../../../data/helper/app_router.dart';
 import '../../../data/util/text_style.dart';
 import '../../component/custom_elevated_button.dart';
 class RepoDetailsScreen extends StatefulWidget {
@@ -95,7 +95,7 @@ class _RepoDetailsScreenState extends State<RepoDetailsScreen> {
                     bgColor: AppColor.getPrimaryColor(),
                     text: "View Repo",
                     onTap: () {
-                      MyWebViewWidget(redirectUrl: widget.model.htmlUrl ?? "");
+                      context.pushNamed(AppRouter.webViewScreen, extra: widget.model.htmlUrl ?? "");
                     },
                   ),
                 ],
