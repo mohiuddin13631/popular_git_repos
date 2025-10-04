@@ -46,6 +46,9 @@ class RepoItem {
   String? watchers;
   String? defaultBranch;
   String? score;
+  String? description;
+  String? updatedAt;
+  String? htmlUrl;
 
   RepoItem({
     this.id,
@@ -61,6 +64,9 @@ class RepoItem {
     this.watchers,
     this.defaultBranch,
     this.score,
+    this.description,
+    this.updatedAt,
+    this.htmlUrl
   });
 
   factory RepoItem.fromJson(Map<String, dynamic> json) => RepoItem(
@@ -77,6 +83,9 @@ class RepoItem {
     watchers: json["watchers"]?.toString(),
     defaultBranch: json["default_branch"]?.toString(),
     score: json["score"]?.toString(),
+    description: json["description"]?.toString(),
+    updatedAt: json["updated_at"]?.toString(),
+    htmlUrl: json["html_url"]?.toString(),
   );
 
   Map<String, dynamic> toJson() => {
