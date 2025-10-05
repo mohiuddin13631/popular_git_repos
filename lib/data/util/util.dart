@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -360,3 +361,16 @@ void printW(Object? object) {
     logger.w("$object");
   }
 }
+
+Future<bool> checkInternetConnection() async {
+  final List<ConnectivityResult> connectivityResult = await Connectivity().checkConnectivity();
+
+  if (connectivityResult.contains(ConnectivityResult.mobile) ||
+      connectivityResult.contains(ConnectivityResult.wifi)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
