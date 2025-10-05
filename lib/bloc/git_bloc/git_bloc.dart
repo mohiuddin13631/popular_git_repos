@@ -41,8 +41,10 @@ class GitBloc extends Bloc<GitEvent, GitState> {
       }else{
         final localData = await LocalDBHelper.getRepoData();
 
+        print("data-----");
+        print(localData);
         if (localData != null) {
-          GitRepoModel gitModel = GitRepoModel.fromJson(jsonDecode(localData));
+          gitModel = GitRepoModel.fromJson(jsonDecode(localData));
           emit(GitSuccess(gitModel: gitModel));
         } else {
           emit(GitFailure("Network error & no local data found"));

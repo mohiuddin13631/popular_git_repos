@@ -1,4 +1,5 @@
 
+import 'package:block_structure/data/util/util.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
@@ -37,6 +38,9 @@ class LocalDBHelper {
   static Future<String?> getRepoData() async {
     final db = await database;
     final result = await db.query('git_repo');
+
+    printX("local database: $result");
+
     if (result.isNotEmpty) {
       return result.first['data'] as String;
     }
