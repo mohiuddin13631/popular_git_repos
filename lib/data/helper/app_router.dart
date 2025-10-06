@@ -1,6 +1,6 @@
-import 'package:block_structure/presentation/screens/web_view/web_view_screen.dart';
+import 'package:popular_git_repos/presentation/screens/web_view/web_view_screen.dart';
 import 'package:go_router/go_router.dart';
-import 'package:block_structure/models/git_repo/git_repo_model.dart';
+import 'package:popular_git_repos/models/git_repo/git_repo_model.dart';
 import '../../presentation/screens/git_repo/git_repo_screen.dart';
 import '../../presentation/screens/repo_details/repo_details_screen.dart';
 class AppRouter {

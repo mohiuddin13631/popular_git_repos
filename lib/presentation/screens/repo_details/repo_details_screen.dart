@@ -1,13 +1,14 @@
-import 'package:block_structure/data/helper/date_converter.dart';
-import 'package:block_structure/data/util/app_color.dart';
-import 'package:block_structure/data/util/app_strings.dart';
-import 'package:block_structure/data/util/dimensions.dart';
-import 'package:block_structure/models/git_repo/git_repo_model.dart';
-import 'package:block_structure/presentation/component/custom_app_bar.dart';
-import 'package:block_structure/presentation/component/image/my_network_image_widget.dart';
+import 'package:popular_git_repos/data/helper/date_converter.dart';
+import 'package:popular_git_repos/data/util/app_color.dart';
+import 'package:popular_git_repos/data/util/app_strings.dart';
+import 'package:popular_git_repos/data/util/dimensions.dart';
+import 'package:popular_git_repos/models/git_repo/git_repo_model.dart';
+import 'package:popular_git_repos/presentation/component/custom_app_bar.dart';
+import 'package:popular_git_repos/presentation/screens/repo_details/widget/image_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+
 import '../../../data/helper/app_router.dart';
 import '../../../data/util/text_style.dart';
 import '../../component/custom_elevated_button.dart';
@@ -52,7 +53,7 @@ class _RepoDetailsScreenState extends State<RepoDetailsScreen> {
                     color: Colors.black.withValues(alpha: 0.08),
                     spreadRadius: 1,
                     blurRadius: 1,
-                    offset: const Offset(0, 1), // 👈 pushes shadow 6px downward
+                    offset: const Offset(0, 1),
                   ),
                 ],
               ),
@@ -60,7 +61,7 @@ class _RepoDetailsScreenState extends State<RepoDetailsScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
 
-                  ImageSection(widget: widget),
+                  ImageSection(model: widget.model),
                   const SizedBox(height: 14,),
 
                   Row(
@@ -69,6 +70,7 @@ class _RepoDetailsScreenState extends State<RepoDetailsScreen> {
                       Text(DateConverter.estimatedDateTime(DateTime.parse(widget.model.updatedAt ?? "")), style: AppTextStyle.sectionBodyTextStyle.copyWith(fontSize: 14),),
                     ],
                   ),
+
                   SizedBox(height: Dimensions.space4.h,),
                   Row(
                     children: [
@@ -100,24 +102,4 @@ class _RepoDetailsScreenState extends State<RepoDetailsScreen> {
   }
 }
 
-class ImageSection extends StatelessWidget {
-  const ImageSection({
-    super.key,
-    required this.widget,
-  });
 
-  final RepoDetailsScreen widget;
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-        child: Container(
-            decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(color: AppColor.primary.withValues(alpha: .4 ), width: 4)
-            ),
-            child: MyNetworkImageWidget(imageUrl: widget.model.owner?.avatarUrl ?? "", radius: 100, height: 120, width: 120,)
-        )
-    );
-  }
-}

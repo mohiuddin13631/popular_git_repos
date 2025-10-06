@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:bloc/bloc.dart';
-import 'package:block_structure/data/repository/git_repository.dart';
-import 'package:block_structure/data/util/util.dart';
-import 'package:block_structure/models/git_repo/git_repo_model.dart';
+import 'package:popular_git_repos/data/repository/git_repository.dart';
+import 'package:popular_git_repos/data/util/util.dart';
+import 'package:popular_git_repos/models/git_repo/git_repo_model.dart';
 import 'package:meta/meta.dart';
 
 import '../../data/helper/local_data_base_helper.dart';
@@ -28,14 +28,10 @@ class GitBloc extends Bloc<GitEvent, GitState> {
 
     try {
       GitRepoModel gitModel = GitRepoModel();
-      if(await checkInternetConnection() == false){
+      if(await checkInternetConnection()){
         // Try to fetch from API
         ResponseModel responseModel = await gitRepository.getData();
 
-        print("response json: ${responseModel.responseJson.toString()}");
-
-        // await LocalDBHelper.saveRepoData(responseModel.responseJson.toString());
-        // Parse and emit
         gitModel = GitRepoModel.fromJson(responseModel.responseJson);
 
         await LocalDBHelper.saveRepoData(jsonEncode(gitModel.toJson()));

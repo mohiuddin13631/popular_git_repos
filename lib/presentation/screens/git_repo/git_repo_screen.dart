@@ -1,10 +1,10 @@
-import 'package:block_structure/bloc/git_bloc/git_bloc.dart';
-import 'package:block_structure/data/helper/app_router.dart';
-import 'package:block_structure/data/util/app_color.dart';
-import 'package:block_structure/data/util/app_strings.dart';
-import 'package:block_structure/data/util/dimensions.dart';
-import 'package:block_structure/data/util/text_style.dart';
-import 'package:block_structure/presentation/component/image/my_network_image_widget.dart';
+import 'package:popular_git_repos/bloc/git_bloc/git_bloc.dart';
+import 'package:popular_git_repos/data/helper/app_router.dart';
+import 'package:popular_git_repos/data/util/app_color.dart';
+import 'package:popular_git_repos/data/util/app_strings.dart';
+import 'package:popular_git_repos/data/util/dimensions.dart';
+import 'package:popular_git_repos/data/util/text_style.dart';
+import 'package:popular_git_repos/presentation/component/image/my_network_image_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

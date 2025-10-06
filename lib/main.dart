@@ -1,6 +1,6 @@
-import 'package:block_structure/data/util/app_color.dart';
+import 'package:popular_git_repos/data/util/app_color.dart';
 import 'package:flutter/material.dart';
-import 'package:block_structure/data/helper/app_router.dart';
+import 'package:popular_git_repos/data/helper/app_router.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'data/app_provider/app_provider.dart';

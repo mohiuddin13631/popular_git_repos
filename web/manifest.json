@@ -1,6 +1,6 @@
 {
-    "name": "block_structure",
-    "short_name": "block_structure",
+    "name": "popular_git_repos",
+    "short_name": "popular_git_repos",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

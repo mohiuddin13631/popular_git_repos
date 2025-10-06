@@ -1,5 +1,5 @@
-import 'package:block_structure/data/util/app_color.dart';
-import 'package:block_structure/presentation/component/image/random_color_avatar.dart';
+import 'package:popular_git_repos/data/util/app_color.dart';
+import 'package:popular_git_repos/presentation/component/image/random_color_avatar.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

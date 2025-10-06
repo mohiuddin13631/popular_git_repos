@@ -3,7 +3,7 @@ import 'dart:typed_data';
 
 import 'package:dio/dio.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:block_structure/data/services/shared_pref_service.dart';
+import 'package:popular_git_repos/data/services/shared_pref_service.dart';
 
 import '../../models/global/response_model/response_model.dart';
 import '../url_container.dart';

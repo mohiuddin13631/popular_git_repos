@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:block_structure/presentation/component/custom_app_bar.dart';
+import 'package:popular_git_repos/presentation/component/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 
