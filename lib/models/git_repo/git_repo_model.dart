@@ -101,7 +101,9 @@ class RepoItem {
     "open_issues": openIssues,
     "watchers": watchers,
     "default_branch": defaultBranch,
-    "score": score,
+    "updated_at": updatedAt,
+    "html_url": htmlUrl,
+    "description": description,
   };
 }
 

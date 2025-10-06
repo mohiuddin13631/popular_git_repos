@@ -13,4 +13,8 @@ class AppStrings {
   static const String gitRepo = "Git Repo";
   static const String viewType = "View Type";
   static const String repoDetails = "Repo Details";
+  static const String description = "Description";
+  static const String lastUpdate = "Last Update";
+  static const String name = "Name";
+  static const String viewRepo = "View Repo";
 }

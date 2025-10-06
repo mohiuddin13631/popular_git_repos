@@ -60,32 +60,24 @@ class _RepoDetailsScreenState extends State<RepoDetailsScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
 
-                  Center(
-                      child: Container(
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              border: Border.all(color: AppColor.primary.withValues(alpha: .4 ), width: 4)
-                          ),
-                          child: MyNetworkImageWidget(imageUrl: widget.model.owner?.avatarUrl ?? "", radius: 100, height: 120, width: 120,)
-                      )
-                  ),
+                  ImageSection(widget: widget),
                   const SizedBox(height: 14,),
 
                   Row(
                     children: [
-                      Text("Last Update : ", style: AppTextStyle.sectionBodyBoldTextStyle.copyWith(color: AppColor.black)),
+                      Text("${AppStrings.lastUpdate} : ", style: AppTextStyle.sectionBodyBoldTextStyle.copyWith(color: AppColor.black)),
                       Text(DateConverter.estimatedDateTime(DateTime.parse(widget.model.updatedAt ?? "")), style: AppTextStyle.sectionBodyTextStyle.copyWith(fontSize: 14),),
                     ],
                   ),
                   SizedBox(height: Dimensions.space4.h,),
                   Row(
                     children: [
-                      Text("Name : ", style: AppTextStyle.sectionBodyBoldTextStyle.copyWith(color: AppColor.black)),
+                      Text("${AppStrings.name} : ", style: AppTextStyle.sectionBodyBoldTextStyle.copyWith(color: AppColor.black)),
                       Text(widget.model.fullName ?? "", style: AppTextStyle.sectionBodyTextStyle.copyWith(fontSize: 15),),
                     ],
                   ),
                   SizedBox(height: Dimensions.space4.h,),
-                  Text("Desctiption", style: AppTextStyle.sectionBodyBoldTextStyle.copyWith(color: AppColor.black)),
+                  Text(AppStrings.description, style: AppTextStyle.sectionBodyBoldTextStyle.copyWith(color: AppColor.black)),
                   SizedBox(height: Dimensions.space4.h,),
                   Text(widget.model.description ?? "" , style: AppTextStyle.bodyTextStyle1.copyWith(fontSize: 15)),
 
@@ -93,7 +85,7 @@ class _RepoDetailsScreenState extends State<RepoDetailsScreen> {
                   CustomElevatedBtn(
                     radius: Dimensions.largeRadius.r,
                     bgColor: AppColor.getPrimaryColor(),
-                    text: "View Repo",
+                    text: AppStrings.viewRepo,
                     onTap: () {
                       context.pushNamed(AppRouter.webViewScreen, extra: widget.model.htmlUrl ?? "");
                     },
@@ -104,6 +96,28 @@ class _RepoDetailsScreenState extends State<RepoDetailsScreen> {
           ],
         ),
       ),
+    );
+  }
+}
+
+class ImageSection extends StatelessWidget {
+  const ImageSection({
+    super.key,
+    required this.widget,
+  });
+
+  final RepoDetailsScreen widget;
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+        child: Container(
+            decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(color: AppColor.primary.withValues(alpha: .4 ), width: 4)
+            ),
+            child: MyNetworkImageWidget(imageUrl: widget.model.owner?.avatarUrl ?? "", radius: 100, height: 120, width: 120,)
+        )
     );
   }
 }

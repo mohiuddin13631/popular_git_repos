@@ -39,7 +39,7 @@ class LocalDBHelper {
     final db = await database;
     final result = await db.query('git_repo');
 
-    printX("local database: $result");
+    printX("local database: ${result.first['data']}");
 
     if (result.isNotEmpty) {
       return result.first['data'] as String;
