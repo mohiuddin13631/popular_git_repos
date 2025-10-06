@@ -21,6 +21,7 @@ class GitBloc extends Bloc<GitEvent, GitState> {
 
   void _getRepoData(
       GitRepoFetch event,
+
       Emitter<GitState> emit,
       ) async {
 
@@ -54,6 +55,7 @@ class GitBloc extends Bloc<GitEvent, GitState> {
       emit(GitSuccess(gitModel: gitModel));
     } catch (e) {
       printE(e);
+      emit(GitFailure("Network error & no local data found"));
     }
   }
 

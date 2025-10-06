@@ -27,15 +27,15 @@ class _CustomAppBarState extends State<CustomAppBar> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      foregroundColor: AppColor.primary,
+      backgroundColor: AppColor.primary,
       leading: widget.isShowLeading ? IconButton(
         onPressed: () {
           context.pop();
         },
-        icon: const Icon(Icons.arrow_back, color: AppColor.white)) : null,
+      icon: const Icon(Icons.arrow_back, color: AppColor.white)) : null,
       automaticallyImplyLeading: false,
-      backgroundColor: AppColor.primary,
-      titleTextStyle: AppTextStyle.appBarTitle.copyWith(color: AppColor.white),
-      title: Text(widget.title),
+      title: Text(widget.title, style: const TextStyle(color: AppColor.white)),
     );
   }
 
