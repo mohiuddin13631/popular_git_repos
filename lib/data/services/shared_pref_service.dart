@@ -1,10 +1,9 @@
 import 'package:popular_git_repos/core/imports/app_imports.dart';
 
 class SharedPreferenceService {
+
   // Define keys as constants
   static const String accessTokenKey = 'access_token';
-  static const String accessTokenType = 'access_type';
-  static const String resetPassTokenKey = 'reset_pass_token';
   static const String userEmailKey = 'user_email';
   static const String userNameKey = 'user_name';
   static const String userBalanceKey = 'user_balance';
@@ -15,22 +14,9 @@ class SharedPreferenceService {
   static const String rememberMeKey = 'remember_me';
   static const String isLoggedIn = 'is_logged_in';
   static const String onboardKey = 'onboard_status';
-  static const String generalSettingKey = 'general-setting-key';
-  static const String moduleSettingKey = 'module-setting-key';
-  static const String fcmDeviceKey = 'device-key';
-  static const String needTwoFactorVerification = 'need-tfa';
-  static const String userIdKey = 'user_id';
+
   static const String hasNewNotificationKey = 'new-notification-key';
-  static const String theme = 'theme';
-  static const String token = 'token';
-  static const String countryJsonData = 'country_json_data';
-  static const String countryCode = 'country_code';
-  static const String languageImagePath = 'language_image_path';
-  static const String languageCode = 'language_code';
-  static const String languageKey = 'language-key';
-  static const String languageListKey = 'language-list-key';
   static const String biometricEnabledKey = 'is_biometric_enabled';
-  static const String selectedOperatingCountryKey = 'selected-operating-country-key';
 
   static SharedPreferences? _prefs;
   static final FlutterSecureStorage _secureStorage = const FlutterSecureStorage();
@@ -208,5 +194,4 @@ class SharedPreferenceService {
     await setBool(onboardKey, value);
   }
 
-  // You can add similar methods for other keys as needed.
 }
