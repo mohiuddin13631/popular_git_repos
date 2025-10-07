@@ -1,16 +1,17 @@
-import 'package:popular_git_repos/bloc/git_bloc/git_bloc.dart';
-import 'package:popular_git_repos/data/helper/app_router.dart';
-import 'package:popular_git_repos/data/util/app_color.dart';
-import 'package:popular_git_repos/data/util/app_strings.dart';
-import 'package:popular_git_repos/data/util/dimensions.dart';
-import 'package:popular_git_repos/data/util/text_style.dart';
-import 'package:popular_git_repos/presentation/component/image/my_network_image_widget.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../component/custom_app_bar.dart';
+import '../../../app/component/custom_app_bar.dart';
+import '../../../app/component/image/my_network_image_widget.dart';
+import '../../../core/route/app_router.dart';
+import '../../../core/util/app_color.dart';
+import '../../../core/util/app_strings.dart';
+import '../../../core/util/dimensions.dart';
+import '../../../core/util/text_style.dart';
+import '../../../data/bloc/git_bloc/git_bloc.dart';
 
 class GitRepoScreen extends StatefulWidget {
   const GitRepoScreen({super.key});
@@ -72,7 +73,7 @@ class _GitRepoScreenState extends State<GitRepoScreen> {
                           color: Colors.black.withValues(alpha: 0.08),
                           spreadRadius: 1,
                           blurRadius: 1,
-                          offset: const Offset(0, 1), // 👈 pushes shadow 6px downward
+                          offset: const Offset(0, 1),
                         ),
                       ],
                     ),

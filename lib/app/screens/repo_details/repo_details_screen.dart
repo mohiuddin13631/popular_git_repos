@@ -1,17 +1,16 @@
-import 'package:popular_git_repos/data/helper/date_converter.dart';
-import 'package:popular_git_repos/data/util/app_color.dart';
-import 'package:popular_git_repos/data/util/app_strings.dart';
-import 'package:popular_git_repos/data/util/dimensions.dart';
-import 'package:popular_git_repos/models/git_repo/git_repo_model.dart';
-import 'package:popular_git_repos/presentation/component/custom_app_bar.dart';
-import 'package:popular_git_repos/presentation/screens/repo_details/widget/image_section.dart';
+import 'package:popular_git_repos/app/screens/repo_details/widget/image_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-
-import '../../../data/helper/app_router.dart';
-import '../../../data/util/text_style.dart';
-import '../../component/custom_elevated_button.dart';
+import '../../../app/component/custom_app_bar.dart';
+import '../../../app/component/custom_elevated_button.dart';
+import '../../../core/helper/date_converter.dart';
+import '../../../core/route/app_router.dart';
+import '../../../core/util/app_color.dart';
+import '../../../core/util/app_strings.dart';
+import '../../../core/util/dimensions.dart';
+import '../../../core/util/text_style.dart';
+import '../../../data/models/git_repo/git_repo_model.dart';
 class RepoDetailsScreen extends StatefulWidget {
 
   final RepoItem model;

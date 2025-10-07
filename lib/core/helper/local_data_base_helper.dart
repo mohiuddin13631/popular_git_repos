@@ -1,7 +1,8 @@
 
-import 'package:popular_git_repos/data/util/util.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
+
+import '../util/util.dart';
 
 class LocalDBHelper {
   static Database? _database;

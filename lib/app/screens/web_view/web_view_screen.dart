@@ -1,9 +1,9 @@
 import 'dart:async';
-import 'package:popular_git_repos/presentation/component/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-import '../../component/webview_widget.dart';
+import '../../../app/component/custom_app_bar.dart';
+import '../../../app/component/webview_widget.dart';
 
 class WebViewScreen extends StatefulWidget {
   final String redirectUrl;

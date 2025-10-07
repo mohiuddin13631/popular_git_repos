@@ -1,6 +1,7 @@
-import '../../models/global/response_model/response_model.dart';
+
+import '../models/global/response_model/response_model.dart';
 import '../services/api_service.dart';
-import '../url_container.dart';
+import '../../core/util/url_container.dart';
 
 class GitRepository {
 

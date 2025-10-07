@@ -1,11 +1,12 @@
-import 'package:popular_git_repos/data/util/app_color.dart';
-import 'package:popular_git_repos/presentation/component/image/random_color_avatar.dart';
+import 'package:popular_git_repos/app/component/image/random_color_avatar.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:skeletonizer/skeletonizer.dart';
-import '../../../data/util/dimensions.dart';
+
+import '../../../core/util/app_color.dart';
+import '../../../core/util/dimensions.dart';
 
 class MyNetworkImageWidget extends StatelessWidget {
   final String imageUrl;

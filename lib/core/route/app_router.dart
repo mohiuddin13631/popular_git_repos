@@ -1,8 +1,10 @@
-import 'package:popular_git_repos/presentation/screens/web_view/web_view_screen.dart';
+
 import 'package:go_router/go_router.dart';
-import 'package:popular_git_repos/models/git_repo/git_repo_model.dart';
-import '../../presentation/screens/git_repo/git_repo_screen.dart';
-import '../../presentation/screens/repo_details/repo_details_screen.dart';
+
+import '../../app/screens/git_repo/git_repo_screen.dart';
+import '../../app/screens/repo_details/repo_details_screen.dart';
+import '../../app/screens/web_view/web_view_screen.dart';
+import '../../data/models/git_repo/git_repo_model.dart';
 class AppRouter {
   static GoRouter router = GoRouter(
     routes: <RouteBase>[

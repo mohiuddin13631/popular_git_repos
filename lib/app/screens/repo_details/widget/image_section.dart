@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../../data/util/app_color.dart';
-import '../../../../models/git_repo/git_repo_model.dart';
-import '../../../component/image/my_network_image_widget.dart';
+import '../../../../app/component/image/my_network_image_widget.dart';
+import '../../../../core/util/app_color.dart';
+import '../../../../data/models/git_repo/git_repo_model.dart';
 
 class ImageSection extends StatelessWidget {
   final RepoItem model;

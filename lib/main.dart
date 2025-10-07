@@ -1,9 +1,10 @@
-import 'package:popular_git_repos/data/util/app_color.dart';
+
 import 'package:flutter/material.dart';
-import 'package:popular_git_repos/data/helper/app_router.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'data/app_provider/app_provider.dart';
+import 'core/app_provider/app_provider.dart';
+import 'core/route/app_router.dart';
+import 'core/util/app_color.dart';
 import 'data/services/api_service.dart';
 
 void main() async {
