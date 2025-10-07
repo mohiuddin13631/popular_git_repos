@@ -1,7 +1,7 @@
 class UrlContainer {
 
-  static const String baseUrl = 'https://api.openrepomap.org/data/2.5/';
-  static const String forCast = 'forecast';
-  static const String gitUrl = 'https://api.github.com/search/repositories';
+  static const String baseUrl = 'https://api.github.com/';
+
+  static const String repositories = 'search/repositories';
 
 }
