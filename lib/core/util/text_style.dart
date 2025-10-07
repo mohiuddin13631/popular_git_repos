@@ -1,8 +1,4 @@
-
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import 'app_color.dart';
+import 'package:popular_git_repos/core/imports/app_imports.dart';
 
 class AppTextStyle {
   //Custom

@@ -1,12 +1,4 @@
-import 'dart:io';
-import 'dart:typed_data';
-
-import 'package:dio/dio.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:popular_git_repos/data/services/shared_pref_service.dart';
-import '../../core/util/url_container.dart';
-import '../../core/util/util.dart';
-import '../models/global/response_model/response_model.dart';
+import 'package:popular_git_repos/core/imports/app_imports.dart';
 
 class ApiService {
   static final Dio _dio = Dio(

@@ -1,17 +1,4 @@
-
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
-
-import '../../../app/component/custom_app_bar.dart';
-import '../../../app/component/image/my_network_image_widget.dart';
-import '../../../core/route/app_router.dart';
-import '../../../core/util/app_color.dart';
-import '../../../core/util/app_strings.dart';
-import '../../../core/util/dimensions.dart';
-import '../../../core/util/text_style.dart';
-import '../../../data/bloc/git_bloc/git_bloc.dart';
+import 'package:popular_git_repos/core/imports/app_imports.dart';
 
 class GitRepoScreen extends StatefulWidget {
   const GitRepoScreen({super.key});

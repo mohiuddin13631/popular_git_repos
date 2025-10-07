@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../data/bloc/git_bloc/git_bloc.dart';
-import '../../data/repository/git_repository.dart';
+import 'package:popular_git_repos/core/imports/app_imports.dart';
 
 class AppProviders {
   static Widget provide({required Widget child}) {

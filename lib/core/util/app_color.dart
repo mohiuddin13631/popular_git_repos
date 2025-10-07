@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:popular_git_repos/core/imports/app_imports.dart';
 
 class AppColor {
   //BG

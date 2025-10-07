@@ -1,10 +1,4 @@
-import 'dart:convert';
-
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
-import '../../environment.dart';
-
+import 'package:popular_git_repos/core/imports/app_imports.dart';
 
 class SharedPreferenceService {
   // Define keys as constants

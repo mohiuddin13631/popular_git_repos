@@ -1,12 +1,5 @@
-import 'dart:convert';
+import 'package:popular_git_repos/core/imports/app_imports.dart';
 
-import 'package:bloc/bloc.dart';
-import 'package:popular_git_repos/data/repository/git_repository.dart';
-import 'package:meta/meta.dart';
-import '../../../core/helper/local_data_base_helper.dart';
-import '../../../core/util/util.dart';
-import '../../models/git_repo/git_repo_model.dart';
-import '../../models/global/response_model/response_model.dart';
 part 'git_event.dart';
 part 'git_state.dart';
 

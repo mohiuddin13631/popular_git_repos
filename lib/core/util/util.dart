@@ -1,18 +1,4 @@
-import 'dart:io';
-
-import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:device_info_plus/device_info_plus.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:logger/logger.dart';
-import 'package:permission_handler/permission_handler.dart';
-
-import '../../environment.dart';
-import '../helper/string_format_helper.dart';
-import 'dimensions.dart';
-import 'app_color.dart';
-import 'app_strings.dart';
-
+import 'package:popular_git_repos/core/imports/app_imports.dart';
 
 class MyUtils {
   static void splashScreen() {

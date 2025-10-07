@@ -1,16 +1,5 @@
-import 'package:popular_git_repos/app/screens/repo_details/widget/image_section.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
-import '../../../app/component/custom_app_bar.dart';
-import '../../../app/component/custom_elevated_button.dart';
-import '../../../core/helper/date_converter.dart';
-import '../../../core/route/app_router.dart';
-import '../../../core/util/app_color.dart';
-import '../../../core/util/app_strings.dart';
-import '../../../core/util/dimensions.dart';
-import '../../../core/util/text_style.dart';
-import '../../../data/models/git_repo/git_repo_model.dart';
+import 'package:popular_git_repos/core/imports/app_imports.dart';
+
 class RepoDetailsScreen extends StatefulWidget {
 
   final RepoItem model;

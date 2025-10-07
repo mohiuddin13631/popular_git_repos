@@ -1,5 +1,4 @@
-import 'package:flutter/services.dart';
-import '../util/app_strings.dart';
+import 'package:popular_git_repos/core/imports/app_imports.dart';
 
 class AppConverter {
 

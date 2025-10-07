@@ -1,8 +1,5 @@
-// To parse this JSON data, do
-//
-//     final gitRepoModel = gitRepoModelFromJson(jsonString);
 
-import 'dart:convert';
+import 'package:popular_git_repos/core/imports/app_imports.dart';
 
 GitRepoModel gitRepoModelFromJson(String str) => GitRepoModel.fromJson(json.decode(str));
 
